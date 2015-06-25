@@ -1,15 +1,8 @@
 "use strict";
 Array.prototype.uniq = function () {
-  //this === array
   var uniqArray = [];
   for (var i = 0 ; i<this.length ; i++) {
-    var dup = false
-    for (var j = 0; j < uniqArray.length; j++) {
-      if (this[i] === uniqArray[j]) {
-        dup = true;
-      };
-    };
-    if (dup === false) {
+    if (uniqArray.indexOf(this[i]) === -1) {
       uniqArray.push(this[i]);
     };
   };
